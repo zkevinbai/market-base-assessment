@@ -5,9 +5,7 @@ function iterativeSubsets(array){
         const number = array[i];
         const newArrs = [];
         for (let j = 0; j < res.length; j++) {
-            let curr = res[j].slice(0);
-            curr.push(number);
-            newArrs.push(curr);
+            newArrs.push(res[j].concat(number));
         }
         res = res.concat( newArrs );
     }
