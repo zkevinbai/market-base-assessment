@@ -40,3 +40,18 @@ function letterArray(str) {
     
     return letArr;
 }
+
+function subSets(arr) {
+    let res = [""];
+    for (let i = 0; i < arr.length; i++) {
+        const number = arr[i];
+        let newStrs = [];
+        for (let j = 0; j < res.length; j++) {
+            const subStr = res[j];
+            newStrs.push( subStr + number )
+        }
+        res = res.concat(newStrs);
+    }
+
+    return res;
+}
