@@ -37,7 +37,7 @@ function letterCombinations(str) {
         possibles = dictionary[shift];
         
         let replacements = [];
-        debugger
+        
         while (possibles.length) {
             newLetter = possibles.shift();
             for (let i = 0; i < combinations.length; i++) {
