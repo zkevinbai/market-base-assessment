@@ -1,6 +1,9 @@
 // input: string with numbers
 // output: array of all possible letter combinations
 
+// object 
+
+
 let dictionary = {
     1: [""],
     2: ["a","b","c"],
@@ -24,6 +27,7 @@ function letterCombinations(str) {
         "7": ["p", "q", "r", "s"],
         "8": ["t", "u", "v"],
         "9": ["w", "x", "y", "z"],
+        "0": [""]
     }
     let array = str.split("");
 
@@ -35,7 +39,7 @@ function letterCombinations(str) {
     while (array.length) {
         shift = array.shift();
         possibles = dictionary[shift];
-        
+        if (!possibles.length) continue;
         let replacements = [];
         
         while (possibles.length) {
